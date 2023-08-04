@@ -25,6 +25,7 @@ object GymsDataModule {
         return retrofit.create(GymsApiService::class.java)
     }
 
+
     @Singleton
     @Provides
     fun provideRetrofit(): Retrofit {
@@ -32,9 +33,7 @@ object GymsDataModule {
            .addConverterFactory(
                GsonConverterFactory.create()
            )
-           .baseUrl(
-               "https://cairo-gyms-822da-default-rtdb.firebaseio.com/"
-           )
+           .baseUrl("")/*TODO: ENTER YOUR BASE URL in baseUrl("")*/
            .build()
     }
 

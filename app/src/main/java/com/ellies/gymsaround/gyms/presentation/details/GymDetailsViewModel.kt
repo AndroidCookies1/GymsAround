@@ -20,9 +20,10 @@ class GymDetailsViewModel(
     private var apiService: GymsApiService
 
     init {
+
         val retrofit: Retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://cairo-gyms-822da-default-rtdb.firebaseio.com/")
+            .baseUrl("") /*TODO: ENTER YOUR BASE URL in baseUrl("")*/
             .build()
 
         apiService = retrofit.create(GymsApiService::class.java)
